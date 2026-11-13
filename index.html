@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RoseParadise - Tienda de flores y arreglos florales">
+    <title>RoseParadise | Floristería</title>
+
+    <!-- CONEXIÓN CORRECTA DEL CSS -->
+    <link rel="stylesheet" href="./estilos.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+        <a href="#inicio" class="logo">Rose<span>Paradise</span></a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+            ☰
+        </button>
+
+        <nav class="navegacion" id="navegacion">
+            <a href="#inicio">Inicio</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+        <a href="#carrito" class="boton-carrito">
+            🛒 Carrito <span id="contadorCarrito">0</span>
+        </a>
+    </header>
+
+    <!-- PORTADA -->
+    <section class="portada" id="inicio">
+        <div class="portada-contenido">
+            <p class="etiqueta">EL LENGUAJE DE LAS FLORES</p>
+
+            <h1>Regala flores,<br>regala emociones.</h1>
+
+            <p>
+                Encuentra la flor perfecta para sorprender,
+                expresar sentimientos y crear recuerdos inolvidables.
+            </p>
+
+            <a href="#catalogo" class="boton-principal">
+                Explorar catálogo
+            </a>
+        </div>
+
+        <div class="portada-decoracion" aria-hidden="true">
+            <span>🌹</span>
+            <span>🌷</span>
+            <span>🌸</span>
+        </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section class="beneficios">
+        <article>
+            <span>🌷</span>
+            <h3>Flores especiales</h3>
+            <p>Variedad para cada ocasión.</p>
+        </article>
+
+        <article>
+            <span>🎁</span>
+            <h3>Regalos únicos</h3>
+            <p>Detalles llenos de significado.</p>
+        </article>
+
+        <article>
+            <span>🚚</span>
+            <h3>Entregas</h3>
+            <p>Servicio de entrega disponible.</p>
+        </article>
+
+        <article>
+            <span>💗</span>
+            <h3>Calidad</h3>
+            <p>Cuidamos cada detalle.</p>
+        </article>
+    </section>
+
+    <!-- CATÁLOGO -->
+    <main>
+        <section class="catalogo" id="catalogo">
+
+            <div class="titulo-seccion">
+                <p class="etiqueta">NUESTRA COLECCIÓN</p>
+                <h2>Descubre nuestras flores</h2>
+                <p>Tenemos una flor para cada sentimiento.</p>
+            </div>
+
+            <div class="controles-catalogo">
+                <input
+                    type="search"
+                    id="buscador"
+                    placeholder="Buscar una flor..."
+                    aria-label="Buscar flores"
+                >
+
+                <select id="filtroCategoria" aria-label="Filtrar flores">
+                    <option value="Todas">Todas las categorías</option>
+                    <option value="Rosas">Rosas</option>
+                    <option value="Tulipanes">Tulipanes</option>
+                    <option value="Tropicales">Tropicales</option>
+                    <option value="Variadas">Flores variadas</option>
+                </select>
+            </div>
+
+            <div class="productos-grid" id="productosGrid"></div>
+
+            <p class="mensaje-vacio" id="mensajeVacio" hidden>
+                No encontramos flores con ese nombre.
+            </p>
+
+        </section>
+
+        <!-- CARRITO -->
+        <section class="carrito-seccion" id="carrito">
+
+            <div class="titulo-seccion">
+                <p class="etiqueta">TU SELECCIÓN</p>
+                <h2>Carrito de compras</h2>
+            </div>
+
+            <div class="carrito-contenido">
+
+                <div class="lista-carrito" id="listaCarrito">
+                    <p class="carrito-vacio">
+                        Todavía no has agregado flores.
+                    </p>
+                </div>
+
+                <aside class="resumen-compra">
+                    <h3>Resumen del pedido</h3>
+
+                    <p>
+                        Productos:
+                        <strong id="subtotal">$0.00</strong>
+                    </p>
+
+                    <p class="total-fila">
+                        Total:
+                        <strong id="total">$0.00 USD</strong>
+                    </p>
+
+                    <button id="vaciarCarrito" class="boton-secundario">
+                        Vaciar carrito
+                    </button>
+
+                    <button id="finalizarCompra" class="boton-principal boton-completo">
+                        Preparar pedido
+                    </button>
+
+                    <small>
+                        Los precios están expresados en dólares estadounidenses.
+                    </small>
+                </aside>
+
+            </div>
+        </section>
+
+        <!-- NOSOTROS -->
+        <section class="nosotros" id="nosotros">
+            <div class="nosotros-ilustracion">
+                <span>💐</span>
+                <p>RoseParadise</p>
+            </div>
+
+            <div class="nosotros-texto">
+                <p class="etiqueta">CONÓCENOS</p>
+                <h2>Más que flores, creamos momentos especiales.</h2>
+
+                <p>
+                    En RoseParadise creemos que cada flor tiene una historia
+                    y que un pequeño detalle puede transmitir grandes
+                    sentimientos.
+                </p>
+
+                <p>
+                    Nuestro propósito es ofrecer variedad, belleza y calidad
+                    para acompañarte en tus momentos más importantes.
+                </p>
+
+                <a href="#contacto" class="boton-principal">
+                    Contáctanos
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina" id="contacto">
+
+        <div class="footer-contenido">
+
+            <div>
+                <h2 class="logo">Rose<span>Paradise</span></h2>
+                <p>Flores que hablan por ti.</p>
+            </div>
+
+            <div>
+                <h3>Contacto</h3>
+                <p>Teléfono: +1 202 555 0147</p>
+                <p>contacto@roseparadise.com</p>
+            </div>
+
+            <div>
+                <h3>Ubicación</h3>
+                <p>123 Rose Garden Avenue</p>
+                <p>Miami, Florida, Estados Unidos</p>
+            </div>
+
+            <div>
+                <h3>Horario</h3>
+                <p>Lunes a sábado</p>
+                <p>9:00 a. m. - 6:00 p. m.</p>
+            </div>
+
+        </div>
+
+        <div class="footer-final">
+            <p>© 2026 RoseParadise. Proyecto académico.</p>
+            <p>Los datos de contacto son ficticios.</p>
+        </div>
+
+    </footer>
+
+    <!-- CONEXIÓN CORRECTA DEL JAVASCRIPT -->
+    <script src="./script.js"></script>
+
+</body>
+</html>
